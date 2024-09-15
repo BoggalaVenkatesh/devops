@@ -13,7 +13,7 @@ variable "instance_type" {
 variable "tags" {
     type = map #optional
     default = {
-        Name = "terraform"
+        Name = "backend"
         Project = "Expense"
         Component = "Backend"
         Envirnoment = "DEV"
