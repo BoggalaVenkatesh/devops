@@ -1,10 +1,10 @@
 resource "aws_instance" "terraform" {
     count = length(var.instance_names)
     ami = data.aws_ami.ami_info.id
-    instance_type = var.instance_names.[count.index] == "mysql" ? "t3.small" :"t3.micro"
+    instance_type = var.instance_names[count.index] == "mysql" ? "t3.small" : "t3.micro"
     vpc_security_group_ids= [aws_security_group.allow_ssh_terraform.id]
     tags = {
-        Name= var.instance_names.[count.index]
+        Name= var.instance_names[count.index]
     }
 }
 
