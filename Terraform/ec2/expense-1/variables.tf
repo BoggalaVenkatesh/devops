@@ -5,6 +5,6 @@ variable "instance_names" {
 }
 
 
-variable "domine_name" {
+variable "domain_name" {
     default: "venkatesulu.online"
 }
