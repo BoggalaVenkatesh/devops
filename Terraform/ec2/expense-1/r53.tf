@@ -2,7 +2,7 @@ resource "aws_route53_record" "expense" {
   count = length(var.instance_names)
   zone_id = var.zone_id
   #backend.venkatesulu.online
-  name    = "${var.instance_names[count.index]}.${var.domine_name}"
+  name    = var.instance_names[count.index] == "frontend" ? var.domine_name : "${var.instance_names[count.index]}.${var.domine_name}" #Interpolation ${ ... } 
   type    = "A"
   ttl     = 1
   records = [aws_instance.expense[count.index].private_ip]
