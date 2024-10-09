@@ -6,5 +6,5 @@ variable "instance_names" {
 
 
 variable "domain_name" {
-    default: "venkatesulu.online"
+    default= "venkatesulu.online"
 }
