@@ -1,3 +1,3 @@
 locals {
-  domain_name = venkatesulu.online
+  domain_name = "venkatesulu.online"
 }
