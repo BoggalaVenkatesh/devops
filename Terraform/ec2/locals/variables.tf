@@ -9,6 +9,6 @@ variable "instance_names" {
 #   default = "venkatesulu.online"
 # }
 
-variable "zone_id" {
-  default = "Z07797711LKH2UGDN2UVT"
-}
+# variable "zone_id" {
+#   default = "Z07797711LKH2UGDN2UVT"
+# }
