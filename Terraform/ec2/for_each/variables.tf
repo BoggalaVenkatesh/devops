@@ -1,9 +1,11 @@
-variable "instance_names" {
-  type        = list(string)
-  default     = ["mysql", "backend", "frontend"]
-  description = "description"
+variable  "instances" {
+  type        = map
+  default     = {
+    mysql = "t3.small"
+    backend = "t3.micro"
+    frontend = "t3.micro"
+  }
 }
-
 
 variable "domain_name" {
   default = "venkatesulu.online"
